@@ -8,10 +8,12 @@ class Micropost < ActiveRecord::Base
   default_scope order: 'microposts.created_at DESC'
 
   def self.from_users_follewed_by(user)
-    following_user_ids = "SELECT followed_id FROM relationships
-                          WHERE followed_id = :user_id"
-    where("user_id IN (#{following_user_ids}) OR user_id = :user_id", 
-          user_id: user.id)    
+    where("user_id IN (?) OR user_id = ?", user.followed_user_ids, user.id)
+    # not working
+    # following_user_ids = "SELECT followed_id FROM relationships
+    #                       WHERE followed_id = :user_id"
+    # where("user_id IN (#{following_user_ids}) OR user_id = :user_id", 
+    #       user_id: user.id)    
 
     # working!
     # following_ids = user.followed_users.map(&:id).join(', ')
