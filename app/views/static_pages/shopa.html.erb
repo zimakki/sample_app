@@ -1,0 +1,43 @@
+<html>
+  <head>
+    <title></title>
+    <script src="http://shopa.com/js/popup/jquery-1.3.2.min.js"></script>
+    <script>
+      var jQuery_1_3_2 = $.noConflict(true);
+    </script>
+    <script type="text/javascript" src="http://shopa.com/js/popup/button.js"></script>   
+
+
+  </head>
+  <body>
+    <div>
+      <hr/>https image:<br/>
+      <%= image_tag("https://www.shopa.com/images/images/logo.png") %>
+    </div>
+    <div>
+      <hr/>http image:<br/>
+      <%= image_tag("http://www.shopa.com/images/images/logo.png") %>
+    </div>
+    <div>
+      <hr/>button:<br/>
+
+ 
+  <!-- <input type="button" value=" " style="width:100px;height:50px"  id="shopa_e649c790af8a8a9e72a28a3bfa4197f9" class="shopabutton share_earn_small"/><input type="hidden" value="2" name="shopa_commission" id="shopa_commission" class="shopa_commissionclass"/>  
+ -->
+
+<input type="button" value=" " style="" id="shopa_3004c0586e31a72ff3b2b5457654b13f " class="shopabutton share_earn_small">
+<input type="hidden" value="1.87" name="shopa_commission" id="shopa_commission" class="shopa_commissionclass">  
+
+
+      <br/><br/>
+    </div>
+    <div>
+      <hr/>https link to javascript:<br/>
+      <%= link_to("https javascript", "https://www.shopa.com/js/popup/button.js") %>
+    </div>
+    <div>
+      <hr/>http link to javascript:<br/>
+      <%= link_to("http javascript", "http://www.shopa.com/js/popup/button.js") %>
+    </div>
+  </body>
+</html>
